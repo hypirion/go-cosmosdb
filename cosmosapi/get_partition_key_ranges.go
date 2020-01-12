@@ -41,6 +41,7 @@ type GetPartitionKeyRangesOptions struct {
 
 func (ops GetPartitionKeyRangesOptions) AsHeaders() (map[string]string, error) {
 	headers := map[string]string{}
+	headers["x-ms-max-item-count"] = "1000"
 	return headers, nil
 }
 
